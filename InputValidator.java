@@ -1,0 +1,3 @@
+package com.campus.expense;
+import java.time.*;
+public final class InputValidator {private InputValidator(){} public static String text(String v){if(v==null||v.trim().isEmpty())throw new IllegalArgumentException("Text cannot be empty.");return v.trim();} public static double positiveAmount(double a){if(!Double.isFinite(a)||a<=0)throw new IllegalArgumentException("Amount must be greater than zero.");return a;} public static LocalDate date(LocalDate d){if(d==null)throw new IllegalArgumentException("Date is required.");return d;} public static YearMonth month(YearMonth m){if(m==null)throw new IllegalArgumentException("Month is required.");return m;}}
